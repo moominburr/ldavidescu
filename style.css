@@ -195,11 +195,53 @@ footer {
      object-fit: cover;
 }
 
+.pourquoi-main {
+  min-height: 100vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-template: "Image About" / 35% 65%;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.pourquoi-text {
+  grid-area: About;
+  padding: 1em 2em 1em 0em;
+}
+
+.pourquoi-text h2 {
+  color: black;
+  font-size: 2em;
+}
+
+.pourquoi-text p {
+  font-size: 1.2em;
+  padding-bottom: 1em;
+}
+
+.pourquoi-img {
+  grid-area: Image;
+  padding-right: 1em;
+  overflow: hidden;
+}
+
+.pourquoi-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+  padding: 2em 2em;
+}
+
 .grid-title {
   font-size: 3em;
 }
 
-.enf-main, .adu-main {
+.enf-main, .adu-main, .adol-main {
   min-height: 100vh;
   width: 100%;
   display: -ms-grid;
@@ -218,12 +260,68 @@ footer {
       grid-template-areas: "adutitle adutitle" "aduimg1 adutext2" "adutext3 aduimg2";
 }
 
+.adol-main {
+      grid-template-areas: "adoltitle adolimg1" "adolimg2 adoltext1" "adoltext2 adoltext2";
+}
+
+.adol-title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: adoltitle;
+  background-color: #E6D7CA;
+}
+
+.adol-title h2 {
+  color: #233537;
+}
+
+.adol-text1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: adoltext1;
+  background-color: #94CCC1;
+}
+
+.adol-text2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: adoltext2;
+  background-color: #ECCEFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.adol-p {
+  margin: 2em;
+}
+
+.adol-image1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: adolimg1;
+}
+
+.adol-image2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: adolimg2;
+}
+
 .adu-title {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: adutitle;
-  min-height: 30vh;
+  min-height: 20vh;
+  background-color: #E6D7CA;
 }
 
 .adu-title h2 {
@@ -234,15 +332,17 @@ footer {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: adutext2;
+  background-color: #94CCC1;
 }
 
 .adu-text3 {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: adutext3;
+  background-color: #ECCEFF;
 }
 
-.adu-title, .adu-text1, .adu-text2, .adu-text3 {
+.adu-title, .adu-text1, .adu-text2, .adu-text3, .adol-title, .adol-text1, .adol-text2, .enf-title, .enf-text2, .enf-text1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,7 +359,7 @@ footer {
   color: #275351;
 }
 
-.adu-title p, .adu-text1 p, .adu-text2 p, .adu-text3 p {
+.adu-title p, .adu-text1 p, .adu-text2 p, .adu-text3 p, .adol-title p, .adol-text1 p, .adol-text2 p, .enf-title p, .enf-text2 p, .enf-text1 p {
   font-size: 1.2em;
   padding: 0em 2em;
 }
@@ -312,28 +412,6 @@ footer {
   background-color: #ECCEFF;
 }
 
-.enf-title, .enf-text2, .enf-text1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #275351;
-}
-
-.enf-title p, .enf-text2 p, .enf-text1 p {
-  font-size: 1.2em;
-  padding: 0em 2em;
-}
-
 .enf-image1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -352,11 +430,11 @@ footer {
   grid-area: enfimg3;
 }
 
-.enf-image1, .enf-image2, .enf-image3 {
+.enf-image1, .enf-image2, .enf-image3, .adol-image1, .adol-image2 {
   overflow: hidden;
 }
 
-.enf-image1 img, .enf-image2 img, .enf-image3 img {
+.enf-image1 img, .enf-image2 img, .enf-image3 img, .adol-image1 img, .adol-image2 img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;

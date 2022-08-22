@@ -88,175 +88,228 @@ footer {
     justify-content: space-between;
 }
   
-    .index-text {
-        grid-area: About;
-        padding: 1em;
-        h2 {
-            color: black;
-            font-size: 2em;
-
-        }
-
-        p {
-            font-size: 1.2em;
-            padding-bottom: 1em;
-        }
+.index-text {
+    grid-area: About;
+    padding: 1em;
+    h2 {
+        color: black;
+        font-size: 2em;
     }
-    .index-img {
-        grid-area: Image;
-        padding-right:1em;
-        img {
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-            padding:2em 2em;
-
-        }
-
+    p {
+        font-size: 1.2em;
+        padding-bottom: 1em;
     }
-    .trio-img {
-        grid-area: Imgtrio;
-        min-height: 70vh;
+}
+.index-img {
+    grid-area: Image;
+    padding-right:1em;
+    img {
+        object-fit: cover;
+        height: 100%;
         width: 100%;
-        display: grid;
-        grid-template: "Image1 Image2 Image3" / 1fr 1fr 1fr;
-        column-gap: 20px;
-        padding: 1em 4em;
-        .Image1 {
-            grid-area: Image1;
-        }
-        .Image2{
-            grid-area: Image2;
-        }
-        .Image3 {
-            grid-area: Image3;
-        }
-        .Image1, .Image2, .Image3 {
-            width: 100%;
-            object-fit: cover;
-        }
+        padding:2em 2em;
     }
-    .grid-title {
-        font-size: 3em;
+}
+.trio-img {
+    grid-area: Imgtrio;
+    min-height: 70vh;
+    width: 100%;
+    display: grid;
+    grid-template: "Image1 Image2 Image3" / 1fr 1fr 1fr;
+    column-gap: 20px;
+    padding: 1em 4em;
+    .Image1 {
+        grid-area: Image1;
     }
-
-    .enf-main, .adu-main {
-        min-height: 100vh;
+    .Image2{
+        grid-area: Image2;
+    }
+    .Image3 {
+        grid-area: Image3;
+    }
+    .Image1, .Image2, .Image3 {
         width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
+        object-fit: cover;
     }
-    .enf-main {
-        grid-template-areas: "enfimg1 enftitle"
-        "enftext1 enfimg2"
-        "enfimg3 enftext2";
-    }
-    .adu-main {
-        grid-template-areas: "adutitle adutitle"
-        "aduimg1 adutext2"
-        "adutext3 aduimg2";
-    }
-    .adu-title {
-        grid-area: adutitle ;
-        min-height: 30vh;
-       h2 {
-        color: #275351;
-    }
-    }
+}
+.pourquoi-main {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template: "Image About" / 35% 65%;
+    column-gap: 20px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.pourquoi-text {
+    grid-area: About;
+    padding: 1em 2em 1em 0em;
 
-    .adu-text2 {
-        grid-area: adutext2;
+    h2 {
+        color: black;
+        font-size: 2em;
     }
-    .adu-text3 {
-        grid-area: adutext3;
+    p {
+        font-size: 1.2em;
+        padding-bottom: 1em;
+        
     }
-    .adu-title, .adu-text1, .adu-text2, .adu-text3{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #275351;
-        p {
-            font-size: 1.2em;
-            padding: 0em 2em;
-        }
+}
+.pourquoi-img {
+    grid-area: Image;
+    padding-right:1em;
+    overflow: hidden;
+    img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        padding:2em 2em;
     }
-    .adu-image1{
-        grid-area: aduimg1;
+}
+
+.grid-title {
+    font-size: 3em;
+}
+.enf-main, .adu-main, .adol-main {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+.enf-main {
+    grid-template-areas: "enfimg1 enftitle"
+    "enftext1 enfimg2"
+    "enfimg3 enftext2";
+}
+.adu-main {
+    grid-template-areas: "adutitle adutitle"
+    "aduimg1 adutext2"
+    "adutext3 aduimg2";
+}
+.adol-main {
+    grid-template-areas: "adoltitle adolimg1"
+    "adolimg2 adoltext1"
+    "adoltext2 adoltext2";
+}
+.adol-title {
+    grid-area: adoltitle;
+    background-color: #E6D7CA;
+    h2 {
+        color: #233537;
+    }
+}
+.adol-text1 {
+    grid-area: adoltext1;
+    background-color: #94CCC1;
+}
+.adol-text2 {
+    grid-area: adoltext2;
+    background-color: #ECCEFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.adol-p {
+    margin: 2em;
+}
+.adol-image1 {
+    grid-area: adolimg1;
+}
+.adol-image2 {
+    grid-area: adolimg2;
+}
+.adu-title {
+    grid-area: adutitle ;
+    min-height: 20vh;
+    background-color: #E6D7CA;
+   h2 {
+    color: #275351;
+}
+}
+.adu-text2 {
+    grid-area: adutext2;
+    background-color: #94CCC1;
+}
+.adu-text3 {
+    grid-area: adutext3;
+    background-color: #ECCEFF;
+}
+.adu-title, .adu-text1, .adu-text2, .adu-text3, .adol-title, .adol-text1, .adol-text2, .enf-title, .enf-text2, .enf-text1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #275351;
+    p {
+        font-size: 1.2em;
+        padding: 0em 2em;
+    }
+}
+.adu-image1{
+    grid-area: aduimg1;
+} 
+.adu-image2 {
+    grid-area: aduimg2;
+}
+.adu-image1, .adu-image2 {
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+    }
+}
+.enf-title {
+    grid-area: enftitle;
+    background-color: #E6D7CA;
+    h2 {
+        color: #233537;
+    }
+}
+.enf-text1 {
+    grid-area: enftext1;
+    background-color: #94CCC1;
+}
+.enf-text2 {
+    grid-area: enftext2;
+    background-color: #ECCEFF;
+}
+
+.enf-image1{
+    grid-area: enfimg1;
+}
+.enf-image2 {
+    grid-area: enfimg2;
+}
+.enf-image3 {
+    grid-area: enfimg3;
+}
+.enf-image1, .enf-image2, .enf-image3, .adol-image1, .adol-image2{
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+    }
+}
+.line {
+    padding: 0em 1em;
+    margin-bottom: 1em;
+    width: 1000%;
+    height: 3px;
+    background-color: rgb(82, 167, 162);
+    animation-name: lineanim;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes lineanim {
+    from{
+        width: 10%;
     } 
-    .adu-image2 {
-        grid-area: aduimg2;
+    to {
+        width: 100%;
     }
-    .adu-image1, .adu-image2 {
-        overflow: hidden;
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            
-        }
-    }
-    .enf-title {
-        grid-area: enftitle;
-        background-color: #E6D7CA;
-        h2 {
-            color: #233537;
-        }
-    }
-    .enf-text1 {
-        grid-area: enftext1;
-        background-color: #94CCC1;
-    }
-    .enf-text2 {
-        grid-area: enftext2;
-        background-color: #ECCEFF;
-    }
-    .enf-title, .enf-text2, .enf-text1{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #275351;
-        p {
-            font-size: 1.2em;
-            padding: 0em 2em;
-        }
-    }
-    .enf-image1{
-        grid-area: enfimg1;
-    }
-    .enf-image2 {
-        grid-area: enfimg2;
-    }
-    .enf-image3 {
-        grid-area: enfimg3;
-    }
-    .enf-image1, .enf-image2, .enf-image3{
-        overflow: hidden;
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            
-        }
-
-    }
-    .line {
-        padding: 0em 1em;
-        margin-bottom: 1em;
-        width: 1000%;
-        height: 3px;
-        background-color: rgb(82, 167, 162);
-        animation-name: lineanim;
-        animation-duration: 1.5s;
-        animation-timing-function: ease-in-out;
-    }
-    @keyframes lineanim {
-        from{
-            width: 10%;
-        } 
-        to {
-            width: 100%;
-        }
-    }
+}
