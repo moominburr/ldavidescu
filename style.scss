@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+li, p {
+    font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3{
+    font-family: 'Caveat', serif;
+    color: #FCDEF5;
+}
+header {
+    min-height: 50vh;
+    min-width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'titles titles navul';
+    padding: 2em 1em;
+    background:rgba(0, 0, 0, 0.4) url("img/sofa-no-armch-edit.9c437cfb.jpg");
+    background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-blend-mode: darken;
+   // background-color: #cccccc;
+    h1 { font-size: 5em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+}
+.titles {
+    grid-area: titles;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    grid-area: navul;
+    color:#FCDEF5;
+    padding-left:auto ;
+    padding-right: auto;
+    hr {
+        border-top: 2px double #FCDEF5;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        a {
+            color:#FCDEF5;
+        }
+    }
+
+}
