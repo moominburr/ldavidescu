@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 ul {
     list-style: none;
@@ -42,15 +43,19 @@ header {
     grid-area: titles;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 
 nav {
+    display: flex;
+    align-items: center;
     grid-area: navul;
     color:#FCDEF5;
     padding-left:auto ;
     padding-right: auto;
     hr {
-        border-top: 2px double #FCDEF5;
+        border-top: 2px  #FCDEF5;
+        width: 50%;
     }
     ul {
         display: flex;
@@ -61,3 +66,59 @@ nav {
     }
 
 }
+.index-main {
+
+
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template: "About Image" / 55% 45%;
+    column-gap: 20px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+  
+    .index-text {
+        grid-area: About;
+        padding: 1em;
+        h2 {
+            color: black;
+            font-size: 2em;
+
+        }
+
+        p {
+            font-size: 1.2em;
+            padding-bottom: 1em;
+        }
+    }
+    .index-img {
+        grid-area: Image;
+        padding-right:1em;
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            padding:2em 2em;
+
+        }
+
+    }
+    .line {
+        padding: 0em 1em;
+        margin-bottom: 1em;
+        width: 1000%;
+        height: 3px;
+        background-color: rgb(82, 167, 162);
+        animation-name: lineanim;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes lineanim {
+        from{
+            width: 10%;
+        } 
+        to {
+            width: 100%;
+        }
+    }

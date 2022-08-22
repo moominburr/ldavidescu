@@ -3,6 +3,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 ul {
@@ -65,9 +66,17 @@ header h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: navul;
@@ -77,7 +86,8 @@ nav {
 }
 
 nav hr {
-  border-top: 2px double #FCDEF5;
+  border-top: 2px  #FCDEF5;
+  width: 50%;
 }
 
 nav ul {
@@ -92,5 +102,78 @@ nav ul {
 
 nav ul a {
   color: #FCDEF5;
+}
+
+.index-main {
+  min-height: 100vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-template: "About Image" / 55% 45%;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.index-text {
+  grid-area: About;
+  padding: 1em;
+}
+
+.index-text h2 {
+  color: black;
+  font-size: 2em;
+}
+
+.index-text p {
+  font-size: 1.2em;
+  padding-bottom: 1em;
+}
+
+.index-img {
+  grid-area: Image;
+  padding-right: 1em;
+}
+
+.index-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+  padding: 2em 2em;
+}
+
+.line {
+  padding: 0em 1em;
+  margin-bottom: 1em;
+  width: 1000%;
+  height: 3px;
+  background-color: #52a7a2;
+  -webkit-animation-name: lineanim;
+          animation-name: lineanim;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes lineanim {
+  from {
+    width: 10%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes lineanim {
+  from {
+    width: 10%;
+  }
+  to {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
