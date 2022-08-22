@@ -195,12 +195,69 @@ footer {
      object-fit: cover;
 }
 
+.passe-main {
+  min-height: 100vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-template: "About Image" / 60% 40%;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.passe-text {
+  grid-area: About;
+  padding: 1em 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.passe-text h2 {
+  color: black;
+  font-size: 2em;
+}
+
+.passe-text h4 {
+  color: #52a7a2;
+  font-size: 2em;
+}
+
+.passe-text p {
+  font-size: 1.2em;
+  padding-bottom: 1em;
+}
+
+.passe-img {
+  grid-area: Image;
+  padding-right: 1em;
+  overflow: hidden;
+}
+
+.passe-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+  padding: 2em 2em;
+}
+
 .pourquoi-main {
   min-height: 100vh;
   width: 100%;
   display: -ms-grid;
   display: grid;
-  grid-template: "Image About" / 35% 65%;
+  grid-template: "About Image" / 55% 45%;
   -webkit-column-gap: 20px;
           column-gap: 20px;
   -webkit-box-pack: justify;
@@ -210,7 +267,17 @@ footer {
 
 .pourquoi-text {
   grid-area: About;
-  padding: 1em 2em 1em 0em;
+  padding: 1em 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .pourquoi-text h2 {
