@@ -53,10 +53,12 @@ header {
 nav {
     display: flex;
     align-items: center;
+    justify-content: right;
     grid-area: navul;
     color:#FCDEF5;
     padding-left:auto ;
     padding-right: auto;
+
     hr {
         border-top: 2px  #FCDEF5;
         width: 80%;
@@ -64,12 +66,61 @@ nav {
     ul {
         display: flex;
         flex-direction: column;
+        li {
+            display: none;
+        }
         a {
             color:#FCDEF5;
             font-size: 1.2em;
         }
     }
 
+}
+.liActive {
+    display: block;
+    
+}
+.menu-holder{
+
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-btn {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+    .burger1, .burger2, .burger3 {
+        width: 50px;
+        height: 6px;
+        border-radius: 5px;
+        background-color: #FCDEF5;
+        position: absolute;
+        transition: all 0.5s ease-in-out;
+       }
+    .burger2 {
+        transform: translateY(-16px);
+    }
+
+    .burger3 {
+        transform: translateY(16px);
+    }
+}
+.menu-btn.open .burger1{
+    transform: scale(0.1);
+    background: transparent;
+}
+.menu-btn.open .burger2 {
+    transform: rotate(45deg);
+}
+.menu-btn.open .burger3 {
+    transform: rotate(-45deg);
 }
 footer {
     min-height: 20vh;
@@ -430,3 +481,4 @@ footer {
         width: 100%;
     }
 }
+

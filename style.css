@@ -82,6 +82,9 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: navul;
@@ -105,9 +108,87 @@ nav ul {
           flex-direction: column;
 }
 
+nav ul li {
+  display: none;
+}
+
 nav ul a {
   color: #FCDEF5;
   font-size: 1.2em;
+}
+
+.liActive {
+  display: block;
+}
+
+.menu-holder {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-btn {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn .burger1, .menu-btn .burger2, .menu-btn .burger3 {
+  width: 50px;
+  height: 6px;
+  border-radius: 5px;
+  background-color: #FCDEF5;
+  position: absolute;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn .burger2 {
+  -webkit-transform: translateY(-16px);
+          transform: translateY(-16px);
+}
+
+.menu-btn .burger3 {
+  -webkit-transform: translateY(16px);
+          transform: translateY(16px);
+}
+
+.menu-btn.open .burger1 {
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+  background: transparent;
+}
+
+.menu-btn.open .burger2 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.menu-btn.open .burger3 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 footer {
