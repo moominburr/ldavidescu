@@ -232,13 +232,14 @@ footer {
     "adutext3 aduimg2";
 }
 .adol-main {
-    grid-template-areas: "adoltitle adolimg1"
-    "adolimg2 adoltext1"
-    "adoltext2 adoltext2";
+    grid-template-areas: "adoltitle adoltitle"
+    "adolimg1 adoltext1"
+    "adoltext2 adolimg2";
 }
 .adol-title {
     grid-area: adoltitle;
     background-color: #E6D7CA;
+    min-height: 20vh;
     h2 {
         color: #233537;
     }
@@ -259,9 +260,11 @@ footer {
 }
 .adol-image1 {
     grid-area: adolimg1;
+    max-height: 70vh;
 }
 .adol-image2 {
     grid-area: adolimg2;
+    max-height: 70vh;
 }
 .adu-title {
     grid-area: adutitle ;
@@ -302,7 +305,7 @@ footer {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        
+
     }
 }
 .enf-title {

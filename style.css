@@ -328,14 +328,16 @@ footer {
 }
 
 .adol-main {
-      grid-template-areas: "adoltitle adolimg1" "adolimg2 adoltext1" "adoltext2 adoltext2";
+      grid-template-areas: "adoltitle adoltitle" "adolimg1 adoltext1" "adoltext2 adolimg2";
 }
 
 .adol-title {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: adoltitle;
   background-color: #E6D7CA;
+  min-height: 20vh;
 }
 
 .adol-title h2 {
@@ -352,7 +354,6 @@ footer {
 .adol-text2 {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: adoltext2;
   background-color: #ECCEFF;
   display: -webkit-box;
@@ -371,15 +372,17 @@ footer {
 }
 
 .adol-image1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: adolimg1;
+  max-height: 70vh;
 }
 
 .adol-image2 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
   grid-area: adolimg2;
+  max-height: 70vh;
 }
 
 .adu-title {
