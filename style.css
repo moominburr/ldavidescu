@@ -137,6 +137,12 @@ footer {
       justify-content: space-between;
 }
 
+@media screen and (max-width: 1440px) {
+  .index-main {
+    grid-template: "Image" "About" "Imgtrio" / 100%;
+  }
+}
+
 .index-text {
   grid-area: About;
   padding: 1em;
@@ -195,6 +201,13 @@ footer {
      object-fit: cover;
 }
 
+@media screen and (max-width: 600px) {
+  .trio-img {
+    grid-template: "Image1" "Image2" "Image3"/ 100%;
+    row-gap: 20px;
+  }
+}
+
 .passe-main {
   min-height: 100vh;
   width: 100%;
@@ -206,6 +219,15 @@ footer {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
       justify-content: space-between;
+}
+
+@media screen and (max-width: 960px) {
+  .passe-main {
+    grid-template: "About" "Image" / 100%;
+  }
+  .passe-main h2 {
+    text-align: center;
+  }
 }
 
 .passe-text {
@@ -263,6 +285,15 @@ footer {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
       justify-content: space-between;
+}
+
+@media screen and (max-width: 960px) {
+  .pourquoi-main {
+    grid-template: "About" "Image" / 100%;
+  }
+  .pourquoi-main h2 {
+    text-align: center;
+  }
 }
 
 .pourquoi-text {
@@ -323,14 +354,48 @@ footer {
       grid-template-areas: "enfimg1 enftitle" "enftext1 enfimg2" "enfimg3 enftext2";
 }
 
+@media screen and (max-width: 960px) {
+  .enf-main {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+        grid-template-areas: "enftitle" "enfimg1" "enftext1" "enfimg2" "enftext2" "enfimg3";
+  }
+}
+
 .adu-main {
       grid-template-areas: "adutitle adutitle" "aduimg1 adutext2" "adutext3 aduimg2";
+}
+
+@media screen and (max-width: 960px) {
+  .adu-main {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+        grid-template-areas: "adutitle" "adutext2" "aduimg1" "adutext3" "aduimg2";
+  }
 }
 
 .adol-main {
       grid-template-areas: "adoltitle adoltitle" "adolimg1 adoltext1" "adoltext2 adolimg2";
 }
 
+@media screen and (max-width: 960px) {
+  .adol-main {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+        grid-template-areas: "adoltitle" "adoltext1" "adolimg1" "adoltext2" "adolimg2";
+  }
+}
+
+/*@media screen and (max-width: 600px) {
+    .adol-main {
+        grid-template-columns: 100%;
+        grid-template-areas: "adoltitle"
+        "adoltext1"
+        "adolimg1"
+        "adoltext2"
+        "adolimg2";
+    }
+} */
 .adol-title {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -342,6 +407,7 @@ footer {
 
 .adol-title h2 {
   color: #233537;
+  text-align: center;
 }
 
 .adol-text1 {
@@ -431,7 +497,7 @@ footer {
 
 .adu-title p, .adu-text1 p, .adu-text2 p, .adu-text3 p, .adol-title p, .adol-text1 p, .adol-text2 p, .enf-title p, .enf-text2 p, .enf-text1 p {
   font-size: 1.2em;
-  padding: 0em 2em;
+  padding: 1em 2em;
 }
 
 .adu-image1 {
@@ -462,6 +528,7 @@ footer {
   -ms-grid-column: 2;
   grid-area: enftitle;
   background-color: #E6D7CA;
+  min-height: 20vh;
 }
 
 .enf-title h2 {
