@@ -23,6 +23,11 @@ h1, h2, h4 {
   color: #FCDEF5;
 }
 
+h1 a, h2 a, h4 a {
+  color: #FCDEF5;
+  cursor: pointer;
+}
+
 h4 {
   font-size: 2.5em;
 }
@@ -34,7 +39,7 @@ header {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas: 'titles titles navul';
+      grid-template-areas: 'titles titles burger' "titles titles navul" "titles titles .";
   padding: 2em 1em;
   background: rgba(0, 0, 0, 0.5) url("img/sofa-no-armch-edit.9c437cfb.jpg");
   background-position: center;
@@ -44,6 +49,20 @@ header {
   background-size: cover;
   /* Resize the background image to cover the entire container */
   background-blend-mode: darken;
+}
+
+@media screen and (max-width: 960px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 header h1 {
@@ -59,8 +78,21 @@ header h3 {
   color: #FCDEF5;
 }
 
+@media screen and (max-width: 960px) {
+  header h1 {
+    font-size: 3em;
+  }
+  header h2 {
+    font-size: 1em;
+  }
+  header h3 {
+    font-size: 1em;
+  }
+}
+
 .titles {
   -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: titles;
@@ -73,6 +105,9 @@ header h3 {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  position: relative;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 nav {
@@ -85,12 +120,23 @@ nav {
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
-  -ms-grid-row: 1;
+  -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: navul;
   color: #FCDEF5;
   padding-left: auto;
   padding-right: auto;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  height: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  nav {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 
 nav hr {
@@ -106,10 +152,17 @@ nav ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-nav ul li {
-  display: none;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateX(500px);
+          transform: translateX(500px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  height: 100%;
+  z-index: 5;
 }
 
 nav ul a {
@@ -118,7 +171,31 @@ nav ul a {
 }
 
 .liActive {
-  display: block;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  height: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  .liActive {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .titlesOff {
+    display: none;
+  }
 }
 
 .menu-holder {
@@ -136,8 +213,6 @@ nav ul a {
 
 .menu-btn {
   position: relative;
-  height: 80px;
-  width: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,6 +228,10 @@ nav ul a {
           flex-direction: column;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  z-index: 10;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: burger;
 }
 
 .menu-btn .burger1, .menu-btn .burger2, .menu-btn .burger3 {
@@ -218,7 +297,7 @@ footer {
       justify-content: space-between;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1200px) {
   .index-main {
     grid-template: "Image" "About" "Imgtrio" / 100%;
   }
