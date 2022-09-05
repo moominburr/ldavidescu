@@ -344,12 +344,12 @@ footer {
     min-height: 100vh;
     width: 100%;
     display: grid;
-    grid-template: "About Image" / 55% 45%;
+    grid-template: "About Image1" "Image2 Image3"/ 50% 50%;
     column-gap: 20px;
     -webkit-box-pack: justify;
     justify-content: space-between;
     @media screen and (max-width: 960px){
-        grid-template: "About" "Image" / 100%;
+        grid-template: "About" "Image1" "Image2""Image3"/ 100%;
         h2 {
             text-align: center;
         }
@@ -372,12 +372,32 @@ footer {
     }
 }
 .pourquoi-img {
-    grid-area: Image;
+    grid-area: Image1;
     padding-right:1em;
     overflow: hidden;
     img {
         object-fit: cover;
         height: 100%;
+        width: 100%;
+        padding:2em 2em;
+    }
+}
+.pourquoi-img2 {
+    grid-area: Image2;
+    overflow: hidden;
+    img {
+        object-fit: cover;
+        height: 50vh;
+        width: 100%;
+        padding:2em 2em;
+    }
+}
+.pourquoi-img3 {
+    grid-area: Image3;
+    overflow: hidden;
+    img {
+        object-fit: cover;
+        height: 50vh;
         width: 100%;
         padding:2em 2em;
     }
