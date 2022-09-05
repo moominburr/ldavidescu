@@ -185,7 +185,7 @@ nav ul li {
 
 nav ul a {
   color: #FCDEF5;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 @media screen and (max-width: 600px) {
@@ -209,8 +209,8 @@ nav ul a {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -311,6 +311,47 @@ nav ul a {
 footer {
   min-height: 20vh;
   background-color: #FCDEF5;
+  display: -ms-grid;
+  display: grid;
+  grid-template: "FooterNav" "Copyright"/100%;
+}
+
+footer .additional-nav {
+  grid-area: FooterNav;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+footer .additional-nav ul {
+  padding: 1em 8em;
+}
+
+footer .additional-nav ul .footer-li {
+  font-size: 1em;
+  color: black;
+}
+
+@media screen and (max-width: 960px) {
+  footer .additional-nav {
+    display: block;
+  }
+  footer .additional-nav ul {
+    padding: 1em 0em 0em 0em;
+    text-align: center;
+    text-decoration: underline;
+  }
+}
+
+footer .Copyright {
+  grid-area: Copyright;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -320,6 +361,13 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 1em;
+}
+
+@media screen and (max-width: 960px) {
+  footer .Copyright {
+    padding: 1em 0em 3em 0em;
+  }
 }
 
 .index-main {
@@ -536,12 +584,13 @@ footer {
 .pourquoi-img2 {
   grid-area: Image2;
   overflow: hidden;
+  padding: 0 3em 0 2em;
 }
 
 .pourquoi-img2 img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 50vh;
+  height: 80vh;
   width: 100%;
   padding: 2em 2em;
 }
@@ -549,12 +598,13 @@ footer {
 .pourquoi-img3 {
   grid-area: Image3;
   overflow: hidden;
+  padding: 0 3em 0 2em;
 }
 
 .pourquoi-img3 img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 50vh;
+  max-height: 80vh;
   width: 100%;
   padding: 2em 2em;
 }

@@ -127,7 +127,7 @@ nav {
         }
         a {
             color:#FCDEF5;
-            font-size: 1.2em;
+            font-size: 1em;
             
             @media screen and (max-width: 600px) {
                 font-size: 1em;
@@ -145,7 +145,7 @@ nav {
     position: absolute;
     display: flex;
     align-items: flex-end;
-    transform: translateX(0px);
+    transform: translateX(10px);
     transition: all 0.5s ease-in-out;
     // height: 100%;
     @media screen and (max-width: 960px) {
@@ -217,9 +217,44 @@ nav {
 footer {
     min-height: 20vh;
     background-color: #FCDEF5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template: "FooterNav""Copyright" / 100%;
+    .additional-nav {
+        grid-area: FooterNav;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        ul {
+            padding: 1em 8em;
+            .footer-li {
+                font-size: 1em;
+                color: black;
+            }
+        }
+        @media screen and (max-width: 960px) {
+            display: block;
+            ul {
+                padding: 1em 0em 0em 0em;
+                text-align: center;
+                text-decoration: underline;
+            }
+        }
+
+
+    
+    }
+    .Copyright {
+        grid-area: Copyright;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        @media  screen and (max-width: 960px) {
+            padding: 1em 0em 3em 0em;
+        }
+    }
+
 }
 
 .index-main {
@@ -385,9 +420,10 @@ footer {
 .pourquoi-img2 {
     grid-area: Image2;
     overflow: hidden;
+    padding: 0 3em 0 2em;
     img {
         object-fit: cover;
-        height: 50vh;
+        height: 80vh;
         width: 100%;
         padding:2em 2em;
     }
@@ -395,9 +431,10 @@ footer {
 .pourquoi-img3 {
     grid-area: Image3;
     overflow: hidden;
+    padding: 0 3em 0 2em;
     img {
         object-fit: cover;
-        height: 50vh;
+        max-height: 80vh;
         width: 100%;
         padding:2em 2em;
     }
