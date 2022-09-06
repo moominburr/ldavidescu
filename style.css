@@ -160,7 +160,8 @@ nav ul {
           align-items: flex-end;
   position: absolute;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(black));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), black);
   -webkit-transform: translateX(500px);
           transform: translateX(500px);
   -webkit-transition: all 0.5s ease-in-out;
@@ -168,6 +169,13 @@ nav ul {
   height: 50vh;
   z-index: 5;
   padding: 3em 2em 1em 2em;
+}
+
+@media screen and (max-width: 960px) {
+  nav ul {
+    background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.3)), to(black));
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.3), black);
+  }
 }
 
 @media screen and (max-width: 960px) {
