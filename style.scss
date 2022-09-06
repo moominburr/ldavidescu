@@ -379,7 +379,7 @@ footer {
     min-height: 100vh;
     width: 100%;
     display: grid;
-    grid-template: "About Image1" "Image2 Image3"/ 50% 50%;
+    grid-template: "About Image1" "Image2 Image3"/ 1fr 1fr;
     column-gap: 20px;
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -410,6 +410,9 @@ footer {
     grid-area: Image1;
     padding-right:1em;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
         object-fit: cover;
         height: 100%;
@@ -420,23 +423,23 @@ footer {
 .pourquoi-img2 {
     grid-area: Image2;
     overflow: hidden;
-    padding: 0 3em 0 2em;
+    padding: 2em;
     img {
         object-fit: cover;
         height: 80vh;
         width: 100%;
-        padding:2em 2em;
+
     }
 }
 .pourquoi-img3 {
     grid-area: Image3;
     overflow: hidden;
-    padding: 0 3em 0 2em;
+    padding: 2em;
     img {
         object-fit: cover;
         max-height: 80vh;
         width: 100%;
-        padding:2em 2em;
+
     }
 }
 

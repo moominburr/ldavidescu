@@ -525,7 +525,7 @@ footer .Copyright {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  grid-template: "About Image1" "Image2 Image3"/ 50% 50%;
+  grid-template: "About Image1" "Image2 Image3"/ 1fr 1fr;
   -webkit-column-gap: 20px;
           column-gap: 20px;
   -webkit-box-pack: justify;
@@ -571,6 +571,15 @@ footer .Copyright {
   grid-area: Image1;
   padding-right: 1em;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .pourquoi-img img {
@@ -584,7 +593,7 @@ footer .Copyright {
 .pourquoi-img2 {
   grid-area: Image2;
   overflow: hidden;
-  padding: 0 3em 0 2em;
+  padding: 2em;
 }
 
 .pourquoi-img2 img {
@@ -592,13 +601,12 @@ footer .Copyright {
      object-fit: cover;
   height: 80vh;
   width: 100%;
-  padding: 2em 2em;
 }
 
 .pourquoi-img3 {
   grid-area: Image3;
   overflow: hidden;
-  padding: 0 3em 0 2em;
+  padding: 2em;
 }
 
 .pourquoi-img3 img {
@@ -606,7 +614,6 @@ footer .Copyright {
      object-fit: cover;
   max-height: 80vh;
   width: 100%;
-  padding: 2em 2em;
 }
 
 .grid-title {
