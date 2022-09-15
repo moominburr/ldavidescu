@@ -115,6 +115,18 @@ header h3 {
   transition: all 0.5s ease-in-out;
 }
 
+@media screen and (max-width: 960px) {
+  .titles {
+    margin: 5em 0em 0em 0em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .titles {
+    margin: 3em 0em 0em 0em;
+  }
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -354,7 +366,7 @@ footer .additional-nav ul .footer-li {
   footer .additional-nav ul {
     padding: 1em 0em 0em 0em;
     text-align: center;
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
@@ -412,6 +424,12 @@ footer .Copyright {
   padding-bottom: 1em;
 }
 
+@media screen and (max-width: 600px) {
+  .index-text p {
+    font-size: 1em;
+  }
+}
+
 .index-img {
   grid-area: Image;
   padding-right: 1em;
@@ -435,6 +453,12 @@ footer .Copyright {
   -webkit-column-gap: 20px;
           column-gap: 20px;
   padding: 1em 4em;
+}
+
+@media screen and (max-width: 960px) {
+  .trio-img {
+    min-height: 30vh;
+  }
 }
 
 .trio-img .Image1 {
@@ -514,6 +538,12 @@ footer .Copyright {
   padding-bottom: 1em;
 }
 
+@media screen and (max-width: 600px) {
+  .passe-text p {
+    font-size: 1em;
+  }
+}
+
 .passe-img {
   grid-area: Image;
   padding-right: 1em;
@@ -573,6 +603,12 @@ footer .Copyright {
 .pourquoi-text p {
   font-size: 1.2em;
   padding-bottom: 1em;
+}
+
+@media screen and (max-width: 600px) {
+  .pourquoi-text p {
+    font-size: 1em;
+  }
 }
 
 .pourquoi-img {
@@ -699,6 +735,12 @@ footer .Copyright {
   text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+  .adol-title h2 {
+    font-size: 2em;
+  }
+}
+
 .adol-text1 {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
@@ -747,10 +789,17 @@ footer .Copyright {
   grid-area: adutitle;
   min-height: 20vh;
   background-color: #E6D7CA;
+  text-align: center;
 }
 
 .adu-title h2 {
   color: #275351;
+}
+
+@media screen and (max-width: 600px) {
+  .adu-title h2 {
+    font-size: 2em;
+  }
 }
 
 .adu-text2 {
@@ -789,6 +838,12 @@ footer .Copyright {
   padding: 1em 2em;
 }
 
+@media screen and (max-width: 600px) {
+  .adu-title p, .adu-text1 p, .adu-text2 p, .adu-text3 p, .adol-title p, .adol-text1 p, .adol-text2 p, .enf-title p, .enf-text2 p, .enf-text1 p {
+    font-size: 1em;
+  }
+}
+
 .adu-image1 {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -822,6 +877,12 @@ footer .Copyright {
 
 .enf-title h2 {
   color: #233537;
+}
+
+@media screen and (max-width: 600px) {
+  .enf-title h2 {
+    font-size: 2em;
+  }
 }
 
 .enf-text1 {

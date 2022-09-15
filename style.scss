@@ -83,6 +83,12 @@ header {
     justify-content: space-around;
     position: relative;
     transition: all 0.5s ease-in-out;
+    @media screen and (max-width: 960px) {
+        margin: 5em 0em 0em 0em;
+    }
+    @media screen and (max-width: 600px) {
+        margin: 3em 0em 0em 0em;
+    }
 }
 
 nav {
@@ -240,7 +246,7 @@ footer {
             ul {
                 padding: 1em 0em 0em 0em;
                 text-align: center;
-                text-decoration: underline;
+                text-decoration: none;
             }
         }
 
@@ -286,6 +292,9 @@ footer {
     p {
         font-size: 1.2em;
         padding-bottom: 1em;
+        @media screen and (max-width: 600px) {
+            font-size: 1em;
+        }
     }
 }
 .index-img {
@@ -307,9 +316,11 @@ footer {
     width: 100%;
     display: grid;
     grid-template: "Image1 Image2 Image3" / 1fr 1fr 1fr;
-
     column-gap: 20px;
     padding: 1em 4em;
+    @media screen and (max-width: 960px) {
+     min-height: 30vh;   
+    }
     .Image1 {
         grid-area: Image1;
     }
@@ -328,6 +339,7 @@ footer {
     .trio-img{
         grid-template: "Image1" "Image2" "Image3"/ 100%;
         row-gap: 20px;
+        
     }
 }
 .passe-main {
@@ -362,6 +374,9 @@ footer {
     p {
         font-size: 1.2em;
         padding-bottom: 1em;
+        @media screen and (max-width: 600px) {
+            font-size: 1em;
+        }
         
     }
 }
@@ -406,6 +421,9 @@ footer {
     p {
         font-size: 1.2em;
         padding-bottom: 1em;
+        @media screen and (max-width: 600px) {
+            font-size: 1em;
+        }
         
     }
 }
@@ -517,6 +535,9 @@ footer {
     h2 {
         color: #233537;
         text-align: center;
+        @media screen and (max-width: 600px) {
+            font-size: 2em;
+        }
     }
 }
 .adol-text1 {
@@ -545,8 +566,12 @@ footer {
     grid-area: adutitle ;
     min-height: 20vh;
     background-color: #E6D7CA;
+    text-align: center;
    h2 {
     color: #275351;
+    @media screen and (max-width: 600px) {
+        font-size: 2em;
+    }
 }
 }
 .adu-text2 {
@@ -566,6 +591,9 @@ footer {
     p {
         font-size: 1.2em;
         padding: 1em 2em;
+        @media screen and (max-width: 600px) {
+            font-size: 1em;
+        }
     }
 }
 .adu-image1{
@@ -589,6 +617,9 @@ footer {
     min-height: 20vh;
     h2 {
         color: #233537;
+        @media screen and (max-width: 600px) {
+            font-size: 2em;
+        }
     }
 }
 .enf-text1 {
