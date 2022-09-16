@@ -505,9 +505,10 @@ footer {
     }
 }
 .adol-main {
-    grid-template-areas: "adoltitle adoltitle"
-    "adolimg1 adoltext1"
-    "adoltext2 adolimg2";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "adoltitle adoltitle adoltitle"
+    "adoltext1 adoltext1 adolimg1 "
+    "adolimg2 adoltext2 adoltext2 ";
     @media screen and (max-width: 960px){
         grid-template-columns: 100%;
         grid-template-areas: "adoltitle"

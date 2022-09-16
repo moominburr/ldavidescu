@@ -700,7 +700,9 @@ footer .Copyright {
 }
 
 .adol-main {
-      grid-template-areas: "adoltitle adoltitle" "adolimg1 adoltext1" "adoltext2 adolimg2";
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "adoltitle adoltitle adoltitle" "adoltext1 adoltext1 adolimg1 " "adolimg2 adoltext2 adoltext2 ";
 }
 
 @media screen and (max-width: 960px) {
@@ -724,7 +726,7 @@ footer .Copyright {
 .adol-title {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
+  -ms-grid-column-span: 3;
   grid-area: adoltitle;
   background-color: #E6D7CA;
   min-height: 20vh;
@@ -743,14 +745,16 @@ footer .Copyright {
 
 .adol-text1 {
   -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: adoltext1;
   background-color: #94CCC1;
 }
 
 .adol-text2 {
   -ms-grid-row: 3;
-  -ms-grid-column: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
   grid-area: adoltext2;
   background-color: #ECCEFF;
   display: -webkit-box;
@@ -776,14 +780,14 @@ footer .Copyright {
 
 .adol-image1 {
   -ms-grid-row: 2;
-  -ms-grid-column: 1;
+  -ms-grid-column: 3;
   grid-area: adolimg1;
   max-height: 70vh;
 }
 
 .adol-image2 {
   -ms-grid-row: 3;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   grid-area: adolimg2;
   max-height: 70vh;
 }
