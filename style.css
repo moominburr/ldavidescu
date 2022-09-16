@@ -180,7 +180,7 @@ nav ul {
   transition: all 0.5s ease-in-out;
   height: 50vh;
   z-index: 5;
-  padding: 3em 2em 1em 2em;
+  padding: 5em 2em 1em 2em;
 }
 
 @media screen and (max-width: 960px) {
@@ -491,17 +491,13 @@ footer .Copyright {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  grid-template: "About Image" / 60% 40%;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
+  grid-template: "Image About About" "ImgTrio1 ImgTrio1 ImgTrio1" / 1fr 1fr 1fr;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
 }
 
 @media screen and (max-width: 960px) {
   .passe-main {
-    grid-template: "About" "Image" / 100%;
+    grid-template: "About" "Image" "ImgTrio1"/ 100%;
   }
   .passe-main h2 {
     text-align: center;
@@ -510,7 +506,7 @@ footer .Copyright {
 
 .passe-text {
   grid-area: About;
-  padding: 1em 2em;
+  padding: 1em 2em 1em 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -521,6 +517,12 @@ footer .Copyright {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (max-width: 960px) {
+  .passe-text {
+    padding: 1em;
+  }
 }
 
 .passe-text h2 {
@@ -544,10 +546,63 @@ footer .Copyright {
   }
 }
 
+.imgtrio1 {
+  grid-area: ImgTrio1;
+  min-height: 50vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-template: "Image4 Image5 Image6"/ 1fr 1fr 1fr;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  padding: 1em 4em 2em 4em;
+}
+
+@media screen and (max-width: 960px) {
+  .imgtrio1 {
+    min-height: 30vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .imgtrio1 {
+    grid-template: "Image4" "Image5" "Image6"/100%;
+    row-gap: 20px;
+    padding: 1em;
+  }
+}
+
+.imgtrio1 .Image4 {
+  grid-area: Image4;
+}
+
+.imgtrio1 .Image5 {
+  grid-area: Image5;
+}
+
+.imgtrio1 .Image6 {
+  grid-area: Image6;
+}
+
+.imgtrio1 .Image4, .imgtrio1 .Image5, .imgtrio1 .Image6 {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .passe-img {
   grid-area: Image;
-  padding-right: 1em;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .passe-img img {
@@ -555,7 +610,13 @@ footer .Copyright {
      object-fit: cover;
   height: 100%;
   width: 100%;
-  padding: 2em 2em;
+  padding: 1em 1em 1em 3em;
+}
+
+@media screen and (max-width: 960px) {
+  .passe-img img {
+    padding: 1em;
+  }
 }
 
 .pourquoi-main {
@@ -598,6 +659,7 @@ footer .Copyright {
 .pourquoi-text h2 {
   color: black;
   font-size: 2em;
+  text-align: center;
 }
 
 .pourquoi-text p {
