@@ -32,6 +32,16 @@ h4 {
   font-size: 2.5em;
 }
 
+.email {
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 960px) {
+  .email {
+    font-size: 0.8rem;
+  }
+}
+
 header {
   min-height: 50vh;
   min-width: 100vw;
